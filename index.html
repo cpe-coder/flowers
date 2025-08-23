@@ -77,7 +77,6 @@
 				width: 100%;
 				text-align: center;
 				position: absolute;
-				top: 50px;
 				left: 50%;
 				transform: translateX(-50%);
 				color: #e0b3ff;
@@ -98,11 +97,81 @@
 					transform: translate(-50%, 0);
 				}
 			}
+
+			.moon {
+				position: absolute;
+				top: -200px;
+				left: 50%;
+				width: 500px;
+				height: 500px;
+				background: radial-gradient(circle at 20% 20%, #fff, #ddd 50%, #aaa);
+				border-radius: 50%;
+				box-shadow: 0 20px 100px rgba(255, 255, 200, 0.8);
+				transform: translateX(-100%);
+				animation: moonFloat 3s ease-in-out infinite;
+			}
+
+			@keyframes moonFloat {
+				0%,
+				100% {
+					transform: translate(-50%, 0px);
+				}
+				50% {
+					transform: translate(-50%, -10px);
+				}
+			}
+
+			.cat-gif {
+				position: absolute;
+				bottom: 10px; /* near bottom of moon */
+				width: 160px;
+				height: auto;
+				animation: catBounce 3s ease-in-out infinite;
+			}
+
+			.cat-left {
+				left: 35%; /* Adjust horizontal position */
+				transform: translateX(-50%);
+			}
+
+			.cat-right {
+				left: 65%;
+				transform: translateX(-50%);
+			}
+
+			.city-view {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 200px;
+				background: url("city-silhouette.jpg") repeat-x;
+				background-size: contain;
+				animation: cityMove 20s linear infinite;
+				z-index: 0;
+			}
+
+			@keyframes cityMove {
+				from {
+					background-position: 0 0;
+				}
+				to {
+					background-position: -1000px 0;
+				}
+			}
 		</style>
 	</head>
 	<body class="not-loaded">
 		<div class="night"></div>
-		<div class="greeting-text">Blessed Saturday din po😇🤍</div>
+		<div class="city-view"></div>
+		<div class="moon">
+			<img src="cat1.gif" class="cat-gif cat-left" />
+			<img src="cat2.gif" class="cat-gif cat-right" />
+		</div>
+		<div class="moon">
+			<img class="cat-gif cat-left" src="cat.gif" alt="Cute Cat" />
+			<img class="cat-gif cat-right" src="cat2.gif" alt="Cute Cat" />
+		</div>
 		<div class="flowers">
 			<div class="flower flower--1">
 				<div class="flower__leafs flower__leafs--1">
@@ -291,127 +360,8 @@
 					<div class="flower__g-fr__leaf flower__g-fr__leaf--8"></div>
 				</div>
 			</div>
-
-			<div class="long-g long-g--0">
-				<div class="grow-ans" style="--d: 3s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 2.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.4s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--1">
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.8s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--2">
-				<div class="grow-ans" style="--d: 4s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.4s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--3">
-				<div class="grow-ans" style="--d: 4s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--4">
-				<div class="grow-ans" style="--d: 4s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--5">
-				<div class="grow-ans" style="--d: 4s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--6">
-				<div class="grow-ans" style="--d: 4.2s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.4s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.6s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 4.8s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
-
-			<div class="long-g long-g--7">
-				<div class="grow-ans" style="--d: 3s">
-					<div class="leaf leaf--0"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.2s">
-					<div class="leaf leaf--1"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.5s">
-					<div class="leaf leaf--2"></div>
-				</div>
-				<div class="grow-ans" style="--d: 3.6s">
-					<div class="leaf leaf--3"></div>
-				</div>
-			</div>
 		</div>
+		<!-- <div class="greeting-text">Blessed Sunday po🤍😇🙌</div> -->
 	</body>
 	<script src="script.js"></script>
 </html>
