@@ -21,8 +21,10 @@ body {
 }
 
 .night {
+	width: 100%;
 	position: fixed;
 	left: 50%;
+	overflow: hidden;
 	top: 0;
 	transform: translateX(-50%);
 	width: 100%;
@@ -1437,6 +1439,7 @@ body {
 }
 
 section {
+	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
